@@ -83,3 +83,12 @@ while True:
 
 # Graficar el árbol binario de búsqueda
 arbol.graficar_arbol()
+
+# Buscar un valor en el árbol
+valor_buscar = input("Ingresa un valor para buscar en el árbol: ")
+nodo_encontrado = arbol.buscar(int(valor_buscar))
+
+if nodo_encontrado:
+    print("El valor se encuentra en el árbol.")
+else:
+    print("El valor no se encuentra en el árbol.")
