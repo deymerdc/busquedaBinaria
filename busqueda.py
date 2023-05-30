@@ -69,3 +69,17 @@ class ArbolBinarioBusqueda:
         if nodo.derecha is not None:
             ax.plot([x, x + nivel], [y, y - 1], 'k-')
             self._graficar_recursivo(ax, nodo.derecha, x + nivel, y - 1, nivel/2)
+
+# Crear el árbol binario de búsqueda
+arbol = ArbolBinarioBusqueda()
+
+# Ingresar los valores del árbol por teclado
+while True:
+    valor = input("Ingresa un valor para el árbol (o presiona enter para terminar): ")
+    if valor == '':
+        break
+
+    arbol.insertar(int(valor))
+
+# Graficar el árbol binario de búsqueda
+arbol.graficar_arbol()
